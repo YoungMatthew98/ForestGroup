@@ -1,0 +1,109 @@
+@media (min-width: 992px) {
+	.section-title {
+		font-size: 3.6rem;
+	}
+
+	//? Sekcja "O nas"
+	.aboutus {
+		&__title {
+			font-size: 2.6rem;
+		}
+		&__info {
+			font-size: 2.2rem;
+		}
+	}
+	//? Sekcja z Hero img
+
+	.hero-img {
+		background-image: url('../img/girl-big.jpeg');
+		&__text {
+			padding: 2rem 20rem;
+			font-size: 2.4rem;
+		}
+	}
+
+	//? Sekcja "Oferty"
+
+	.offers {
+		&__title {
+			font-size: 2.2rem;
+		}
+		&__boxes {
+			justify-content: space-between;
+		}
+		&__box {
+			width: 30%;
+			&:nth-child(odd) {
+				margin-right: 0;
+			}
+			&:nth-child(even) {
+				margin-left: 0;
+			}
+			&-title,
+			&-price {
+				font-size: 2.8rem;
+			}
+			&-option,
+			&-option--disabled {
+				font-size: 2.2rem;
+			}
+		}
+		&__info,
+		&__link {
+			font-size: 2.2rem;
+		}
+	}
+
+	//? Sekcja "Footer"
+
+	.footer {
+		&__boxes {
+			display: flex;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		&__box {
+			&-logo {
+				font-size: 4rem;
+			}
+			&-heading {
+				font-size: 2.6rem;
+			}
+			&-link {
+				font-size: 2.2rem;
+			}
+		}
+		&__info {
+			font-size: 2rem;
+		}
+	}
+	//? Sekcja 'Kontakt'
+	.contact {
+		&__form {
+			&-upperbody {
+				width: 60%;
+				margin-right: 6rem;
+				&-box {
+					&-label {
+						font-size: 2.2rem;
+					}
+				}
+				&-btn {
+					font-size: 2.2rem;
+					width: 50%;
+				}
+			}
+			&-lowerbody {
+				width: 40%;
+				&-title {
+					font-size: 2.6rem;
+				}
+				&-number,
+				&-location,
+				&-mail {
+					font-size: 2.2rem;
+				}
+			}
+		}
+	}
+}

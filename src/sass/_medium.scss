@@ -1,0 +1,173 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+@media (min-width: 768px) {
+	//? Nawigacja
+	.nav {
+		justify-content: space-around;
+		&__burger,
+		&__items-mobile {
+			display: none;
+		}
+		&__items-desktop {
+			display: flex;
+		}
+		&__item-desktop {
+			@include navItems;
+			padding: 2rem;
+			font-size: 2.2rem;
+			transition: background-color 0.5s, color 0.5s;
+			&:hover {
+				background-color: $main-color;
+				color: $second-color;
+			}
+		}
+	}
+	//? Header
+	.header {
+		height: 50vh;
+		display: flex;
+		background-image: url('../img/jungle-big.jpeg');
+		&__body {
+			align-items: flex-start;
+		}
+		&__info {
+			font-size: 2.4rem;
+		}
+		&__heading {
+			font-size: 3.2rem;
+		}
+		&__arrow {
+			display: none;
+		}
+	}
+
+	//? Sekcja "O nas"
+	.aboutus {
+		&__boxes {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&__box--left {
+			width: 45%;
+		}
+		&__box--right {
+			width: 50%;
+		}
+		&__title,
+		&__info {
+			text-align: left;
+		}
+		&__title {
+			padding-top: 0;
+			font-size: 2.4rem;
+		}
+		&__info {
+			font-size: 2rem;
+		}
+	}
+
+	//? Sekcja z Hero img
+	.hero-img {
+		background-image: url('../img/girl-big.jpeg');
+		&__text {
+			padding: 2rem 12rem;
+			font-size: 2.2rem;
+		}
+	}
+
+	//? Sekcja "Oferty"
+	.offers {
+		&__title {
+			font-size: 2rem;
+		}
+		&__boxes {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__box {
+			width: 45%;
+			&:nth-child(odd) {
+				margin-right: 2rem;
+			}
+			&:nth-child(even) {
+				margin-left: 2rem;
+			}
+			&-title,
+			&-price {
+				font-size: 2.4rem;
+			}
+			&-option,
+			&-option--disabled {
+				font-size: 2rem;
+			}
+		}
+		&__info,
+		&__link {
+			font-size: 2rem;
+		}
+	}
+
+	//? Sekcja "Footer
+
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+			padding: 8rem 4rem;
+		}
+		&__box {
+			&:nth-child(1) {
+				width: 30%;
+			}
+			&-logo {
+				align-self: flex-start;
+			}
+			&-heading {
+				font-size: 2.4rem;
+			}
+			&-link {
+				font-size: 2rem;
+			}
+		}
+		&__info {
+			font-size: 1.8rem;
+		}
+	}
+	//? Sekcja 'Kontakt'
+	.contact {
+		&__form {
+			display: flex;
+			&-upperbody {
+				width: 50%;
+				margin-right: 4rem;
+				&-box {
+					&-label {
+						font-size: 2rem;
+					}
+				}
+				&-btn {
+					font-size: 2rem;
+					margin-bottom: 0;
+				}
+			}
+			&-lowerbody {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin: 0;
+				text-align: center;
+				width: 50%;
+				&-title {
+					font-size: 2.4rem;
+				}
+				&-number,
+				&-location,
+				&-mail {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}

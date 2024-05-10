@@ -1,0 +1,47 @@
+@use 'colors' as *;
+
+//? Style dla loga
+
+@mixin logo {
+	font-size: 3rem;
+	align-self: center;
+	color: $main-color;
+}
+
+//? Mixin ze stylami dla linków w nawigacji
+@mixin navItems {
+	color: $main-color;
+	text-decoration: none;
+}
+
+//? Mixin ze stylami dla nagłówków każdej sekcji
+
+@mixin sectionTitle {
+	margin-bottom: 4rem;
+	text-align: center;
+	font-weight: 200;
+	text-transform: uppercase;
+	font-size: 3rem;
+}
+
+//? Style dla przycisków
+
+@mixin offersBtns {
+	padding: 1rem 2rem;
+	margin: 2rem 0;
+	color: $main-color;
+	background: none;
+	border-radius: 0.8rem;
+	box-shadow: 0px 1px 5px $main-color;
+	font-size: 1.8rem;
+	font-family: 'Outfit', sans-serif;
+	text-transform: capitalize;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+//? Style na akcję 'hover' dla przycisków
+
+@mixin btnHover {
+	background-color: $accent-color;
+	box-shadow: 0px 1px 5px $accent-color;
+}

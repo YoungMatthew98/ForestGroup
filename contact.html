@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Zainteresowała Cię któraś z naszych ofert? Potrzebujesz wsparcia? Skorzystaj z formularza i skontaktuj się z nami juz teraz!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/039214a6d3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image" href="src/img/forest-favicon.ico">
+    <link rel="stylesheet" href="dist/css/main.min.css">
+    <title>Skontaktuj się z Nami</title>
+</head>
+
+<body>
+    <nav class="nav">
+    <a href="index.html" class="nav__logo" aria-label="logo"><i class="fa-solid fa-tree"></i>Forest</a>
+    <div class="nav__items-mobile">
+        <a href="#" class="nav__item-mobile">Home</a>
+        <a href="#aboutus" class="nav__item-mobile">O nas</a>
+        <a href="#offers" class="nav__item-mobile">Oferta</a>
+        <a href="contact.html" class="nav__item-mobile">Kontakt</a>
+    </div>
+    <div class="nav__items-desktop">
+        <a href="#" class="nav__item-desktop">Home</a>
+        <a href="#aboutus" class="nav__item-desktop">O nas</a>
+        <a href="#offers" class="nav__item-desktop">Oferta</a>
+        <a href="contact.html" class="nav__item-desktop">Kontakt</a>
+    </div>
+    <button class="nav__burger" aria-label="menu"><i class="fa-solid fa-bars"></i></button>
+</nav>    <main>
+        <section class="contact section-padding">
+            <div class="wrapper">
+                <h2 class="section-title">skontaktuj się z nami</h2>
+
+                <form class="contact__form">
+                    <div class="contact__form-upperbody">
+                        <div class="contact__form-upperbody-box">
+                            <label for="name" class="contact__form-upperbody-box-label">imię :</label>
+                            <input type="text" class="contact__form-upperbody-box-input" id="name"
+                                placeholder="Wpisz imię">
+                            <p class="contact__form-upperbody-box-error"></p>
+                        </div>
+                        <div class="contact__form-upperbody-box">
+                            <label for="surname" class="contact__form-upperbody-box-label">nazwisko :</label>
+                            <input type="text" class="contact__form-upperbody-box-input" id="surname"
+                                placeholder="Wpisz nazwisko">
+                            <p class="contact__form-upperbody-box-error"></p>
+                        </div>
+                        <div class="contact__form-upperbody-box">
+                            <label for="mail" class="contact__form-upperbody-box-label">e-mail :</label>
+                            <input type="email" class="contact__form-upperbody-box-input" id="mail"
+                                placeholder="Wpisz email">
+                            <p class="contact__form-upperbody-box-error"></p>
+                        </div>
+                        <div class="contact__form-upperbody-box">
+                            <label for="message" class="contact__form-upperbody-box-label">wiadomość :</label>
+                            <textarea id="message" cols="30" rows="10" class="contact__form-upperbody-box-textarea"
+                                placeholder="Wpisz wiadomość"></textarea>
+                            <p class="contact__form-upperbody-box-error"></p>
+                        </div>
+                        <button class="contact__form-upperbody-btn">wyślij</button>
+                    </div>
+
+                    <div class="contact__form-lowerbody">
+                        <h3 class="contact__form-lowerbody-title">informacje kontaktowe</h3>
+                        <p class="contact__form-lowerbody-number"><i class="fa-solid fa-phone"></i>507-592-072</p>
+                        <p class="contact__form-lowerbody-location"><i
+                                class="fa-solid fa-location-dot"></i>ul.Jasnogórska 2, Kraków</p>
+                        <p class="contact__form-lowerbody-mail"><i class="fa-solid fa-envelope"></i>kontakt@forest.pl
+                        </p>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+        <section class="findus section-padding">
+            <div class="wrapper">
+                <h2 class="section-title">znajdziesz nas tutaj</h2>
+                <div class="findus__map">
+                    <iframe class="findus__localization"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8980500889766!2d19.890269276954324!3d50.08819561338022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1714593871625!5m2!1spl!2spl"
+                        width="600" height="450" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" aria-label="localization"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="footer__boxes">
+        <div class="footer__box">
+            <a href="#" class="footer__box-logo" aria-label="logo"><i class="fa-solid fa-tree"></i>Forest</a>
+        </div>
+        <div class="footer__box">
+            <h3 class="footer__box-heading">o nas</h3>
+            <a href="#" class="footer__box-link">historia</a>
+            <a href="#" class="footer__box-link">parki</a>
+            <a href="#" class="footer__box-link">opinie</a>
+        </div>
+        <div class="footer__box">
+            <h3 class="footer__box-heading">Nasza firma</h3>
+            <a href="#" class="footer__box-link">historia</a>
+            <a href="#" class="footer__box-link">parki</a>
+            <a href="#" class="footer__box-link">opinie</a>
+        </div>
+        <div class="footer__box">
+            <h3 class="footer__box-heading">dokumenty</h3>
+            <a href="#" class="footer__box-link">historia</a>
+            <a href="#" class="footer__box-link">parki</a>
+        </div>
+    </div>
+    <p class="footer__info">&copy;<span class="footer__year"></span> forest group company ltd.</p>
+</footer>    <script src="dist/js/main.min.js"></script>
+    <script src="dist/js/contact.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,442 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+@media (min-width: 280px) {
+	.section-title {
+		@include sectionTitle;
+	}
+
+	//? Nawigacja
+
+	.nav {
+		position: sticky;
+		top: 0;
+		z-index: 999;
+		display: flex;
+		justify-content: space-between;
+		background-color: $second-color;
+		&__logo {
+			padding: 2rem;
+			@include logo;
+			i {
+				margin-right: 1rem;
+			}
+		}
+		&__burger {
+			background: none;
+			font-size: 3rem;
+			padding: 2rem;
+			outline: none;
+			border: 1px solid transparent;
+			color: $main-color;
+			transition: color 0.3s;
+			&:focus {
+				border: 1px solid $main-color;
+			}
+		}
+		&__items-mobile {
+			position: fixed;
+			width: 100%;
+			bottom: 0;
+			right: 0;
+			top: 7.8rem;
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+			// text-align: center;
+			background-color: $main-color;
+			transform: translateX(100%);
+			transition: transform 0.5s;
+			&.active {
+				transform: translateX(0);
+			}
+		}
+		&__item-mobile {
+			position: relative;
+			align-self: center;
+			@include navItems;
+			padding: 2rem;
+			font-size: 1.8rem;
+			color: $second-color;
+			&:before {
+				content: '';
+				position: absolute;
+				// bottom: 0;
+				// left: 0;
+				// width: 100%;
+				// height: 0.3rem;
+				height: 100%;
+				width: 0.3rem;
+				bottom: 0;
+				left: 0;
+				background-color: $second-color;
+				transform: scale(0);
+				transition: transform 0.5s;
+			}
+			&:hover:before {
+				transform: scale(1);
+			}
+		}
+
+		&__items-desktop {
+			display: none;
+		}
+	}
+	//? Header z hero img
+
+	.header {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/jungle-small.jpeg');
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+
+		.wrapper {
+			height: 100%;
+		}
+		&__body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100%;
+		}
+		&__shadow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+		&__heading,
+		&__info,
+		&__arrow {
+			color: $second-color;
+			z-index: 10;
+		}
+		&__info {
+			font-size: 2rem;
+			text-transform: capitalize;
+		}
+		&__heading {
+			margin: 2rem 0;
+			font-size: 3.2rem;
+			font-weight: 400;
+		}
+		&__arrow {
+			justify-self: flex-end;
+			align-self: flex-start;
+			padding: 2rem;
+			font-size: 4rem;
+			cursor: pointer;
+			animation: arrowAnimation 0.5s infinite alternate;
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
+	//? Sekcja "O nas"
+	.aboutus {
+		&__boxes {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+		&__img {
+			width: 100%;
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+		}
+		&__title {
+			text-transform: capitalize;
+			font-size: 2.2rem;
+			padding: 2rem 0;
+		}
+		&__info {
+			font-size: 1.8rem;
+		}
+	}
+	//? Sekcja z Hero img
+
+	.hero-img {
+		position: relative;
+		height: 30vh;
+		background-image: url('../img/girl-small.jpeg');
+		background-position: center;
+		background-size: cover;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&__shadow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 0;
+		}
+		&__box {
+			border: 1px solid $second-color;
+			z-index: 20;
+		}
+		&__text {
+			padding: 1rem 3rem;
+			font-size: 1.8rem;
+			color: $second-color;
+		}
+	}
+
+	//? Sekcja "Oferty"
+	.offers {
+		&__title {
+			margin-bottom: 3rem;
+			font-size: 1.8rem;
+			text-align: center;
+		}
+		&__box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 2rem;
+			margin-bottom: 4rem;
+			border-radius: 0.8rem;
+			box-shadow: 0px 1px 5px $main-color;
+			transition: scale 0.3s;
+			&:hover {
+				scale: 1.05;
+			}
+			&-options {
+				display: flex;
+				flex-direction: column;
+			}
+			&-title,
+			&-price {
+				padding: 1rem 0;
+				font-size: 2.2rem;
+			}
+			&-title {
+				text-transform: capitalize;
+				font-weight: 400;
+			}
+			&-price {
+				font-weight: bold;
+			}
+			&-option,
+			&-option--disabled {
+				padding: 1rem 0;
+				font-size: 1.8rem;
+				.fa-solid {
+					margin-right: 1rem;
+				}
+				&--disabled {
+					color: $footer-color;
+				}
+				.fa-check {
+					color: $accent-color;
+				}
+			}
+			&-btn {
+				@include offersBtns;
+				&:hover {
+					@include btnHover;
+				}
+			}
+		}
+		&__info,
+		&__link {
+			font-size: 1.8rem;
+			text-align: center;
+			color: $main-color;
+		}
+		&__link {
+			position: relative;
+			text-transform: uppercase;
+			z-index: 1;
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 10%;
+				background-color: $accent-color;
+				z-index: -1;
+				transition: height 0.5s;
+			}
+			&:hover::before {
+				height: 100%;
+			}
+		}
+	}
+
+	//? Sekcja "Footer"
+	.footer {
+		background-color: $footer-color;
+		&__boxes {
+			padding: 4rem;
+		}
+		&__box {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 2rem;
+
+			&:nth-child(4) {
+				margin: 0;
+			}
+			&-logo {
+				@include logo;
+				.fa-tree {
+					margin-right: 1rem;
+				}
+			}
+			&-heading,
+			&-link {
+				text-transform: capitalize;
+				padding: 1rem 0;
+			}
+			&-heading {
+				font-size: 2.2rem;
+			}
+			&-link {
+				font-size: 1.8rem;
+				text-decoration: none;
+				color: $main-color;
+			}
+		}
+		&__info {
+			position: relative;
+			padding: 2rem 0;
+			text-align: center;
+			text-transform: capitalize;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				height: 0.1rem;
+				background-color: $main-color;
+			}
+		}
+	}
+
+	//? Sekcja "Kontakt"
+
+	.contact {
+		&__form {
+			&-upperbody {
+				display: flex;
+				flex-direction: column;
+				&-box {
+					display: flex;
+					flex-direction: column;
+
+					&-label {
+						font-size: 1.8rem;
+						text-transform: capitalize;
+						padding-bottom: 2rem;
+					}
+					&-input {
+						border: none;
+						border-bottom: 1px solid $main-color;
+						border-radius: 0;
+						&:focus {
+							border-bottom: 1px solid $accent-color;
+						}
+					}
+					&-textarea {
+						border-radius: 0.8rem;
+						border: 1px solid $main-color;
+						&:focus {
+							border: 1px solid $accent-color;
+						}
+					}
+					&-input,
+					&-textarea {
+						padding: 1rem;
+						// margin-bottom: 2rem;
+						outline: none;
+						font-family: 'Outfit', sans-serif;
+						overflow: hidden;
+						transition: border 0.3s ease;
+						&:focus::placeholder {
+							transform: translateX(-100%);
+						}
+						&::placeholder {
+							transform: translateX(0);
+							transition: transform 0.5s;
+						}
+					}
+					&-textarea {
+						resize: vertical;
+						min-height: 20rem;
+						max-height: 40rem;
+					}
+					&-error {
+						padding: 1rem 0 2rem 0;
+						color: red;
+						visibility: hidden;
+						&.active {
+							visibility: visible;
+						}
+					}
+				}
+				&-btn {
+					@include offersBtns;
+					&:hover {
+						@include btnHover;
+					}
+				}
+			}
+			&-lowerbody {
+				margin-top: 3rem;
+				background-color: $main-color;
+				color: $second-color;
+				text-align: center;
+				border-radius: 0.8rem;
+				&-title,
+				&-number,
+				&-location,
+				&-mail {
+					padding: 2rem 0;
+				}
+				&-title {
+					text-transform: capitalize;
+					font-size: 2.2rem;
+				}
+				&-number,
+				&-location,
+				&-mail {
+					font-size: 1.8rem;
+					.fa-solid {
+						margin-right: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	//? Sekcja 'Findus'
+
+	.findus {
+		&__localization {
+			overflow: hidden;
+			border: 1px solid $main-color;
+			border-radius: 0.8rem;
+			width: 100%;
+		}
+	}
+
+	@keyframes arrowAnimation {
+		from {
+			scale: 1.2;
+		}
+		to {
+			scale: 1;
+		}
+	}
+}

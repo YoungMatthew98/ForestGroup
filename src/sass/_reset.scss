@@ -1,0 +1,32 @@
+@use 'colors' as *;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%; //? To samo co 10px !
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+ul,
+li {
+	list-style-type: none;
+}
+body {
+	background-color: $second-color;
+	font-family: 'Outfit', sans-serif;
+	overflow: visible;
+	font-weight: 200;
+	font-size: 1.6rem; //? BODY MA 16PX , WIĘC 1 EM = 16PX
+}
