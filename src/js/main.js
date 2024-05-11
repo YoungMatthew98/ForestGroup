@@ -23,4 +23,4 @@ const handleYear = () => {
 	item.addEventListener('click', handleMobileNav);
 });
 
-addEventListener('DOMContentLoaded', handleYear());
+window.addEventListener('DOMContentLoaded', handleYear());

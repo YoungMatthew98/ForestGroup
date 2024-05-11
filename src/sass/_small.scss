@@ -58,7 +58,7 @@
 			padding: 2rem;
 			font-size: 1.8rem;
 			color: $second-color;
-			&:before {
+			&::before {
 				content: '';
 				position: absolute;
 				// bottom: 0;
@@ -73,7 +73,7 @@
 				transform: scale(0);
 				transition: transform 0.5s;
 			}
-			&:hover:before {
+			&:hover::before {
 				transform: scale(1);
 			}
 		}
@@ -141,15 +141,16 @@
 		&__boxes {
 			display: flex;
 			flex-direction: column;
-			text-align: center;
 		}
 		&__img {
 			width: 100%;
 			height: 100%;
 			background-position: center;
 			background-size: cover;
+			border-radius: 0.8rem;
 		}
 		&__title {
+			position: relative;
 			text-transform: capitalize;
 			font-size: 2.2rem;
 			padding: 2rem 0;
@@ -282,7 +283,6 @@
 			display: flex;
 			flex-direction: column;
 			margin-bottom: 2rem;
-
 			&:nth-child(4) {
 				margin: 0;
 			}
@@ -301,6 +301,7 @@
 				font-size: 2.2rem;
 			}
 			&-link {
+				position: relative;
 				font-size: 1.8rem;
 				text-decoration: none;
 				color: $main-color;
@@ -334,7 +335,7 @@
 				&-box {
 					display: flex;
 					flex-direction: column;
-
+					overflow: hidden;
 					&-label {
 						font-size: 1.8rem;
 						text-transform: capitalize;
@@ -358,17 +359,16 @@
 					&-input,
 					&-textarea {
 						padding: 1rem;
-						// margin-bottom: 2rem;
 						outline: none;
 						font-family: 'Outfit', sans-serif;
-						overflow: hidden;
 						transition: border 0.3s ease;
-						&:focus::placeholder {
-							transform: translateX(-100%);
-						}
+
 						&::placeholder {
 							transform: translateX(0);
-							transition: transform 0.5s;
+							transition: transform 0.5s ease-out;
+						}
+						&:focus::placeholder {
+							transform: translateX(-100%);
 						}
 					}
 					&-textarea {
@@ -395,9 +395,9 @@
 			&-lowerbody {
 				margin-top: 3rem;
 				background-color: $main-color;
-				color: $second-color;
 				text-align: center;
 				border-radius: 0.8rem;
+				color: $second-color;
 				&-title,
 				&-number,
 				&-location,
