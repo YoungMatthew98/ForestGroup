@@ -29,7 +29,6 @@
 			outline: none;
 			border: 1px solid transparent;
 			color: $main-color;
-			transition: color 0.3s;
 			&:focus {
 				border: 1px solid $main-color;
 			}
@@ -43,7 +42,6 @@
 			display: flex;
 			justify-content: space-evenly;
 			flex-direction: column;
-			// text-align: center;
 			background-color: $main-color;
 			transform: translateX(100%);
 			transition: transform 0.5s;
@@ -338,14 +336,14 @@
 						border: none;
 						border-bottom: 1px solid $main-color;
 						border-radius: 0;
-						&:hover {
+						&:focus {
 							border-bottom: 1px solid $accent-color;
 						}
 					}
 					&-textarea {
 						border-radius: 0.8rem;
 						border: 1px solid $main-color;
-						&:hover {
+						&:focus {
 							border: 1px solid $accent-color;
 						}
 					}
@@ -355,12 +353,12 @@
 						outline: none;
 						font-family: 'Outfit', sans-serif;
 						transition: border 0.3s ease;
-
+						font-size: 1.6rem;
 						&::placeholder {
 							transform: translateX(0);
 							transition: transform 0.5s ease-out;
 						}
-						&:hover::placeholder {
+						&:focus::placeholder {
 							transform: translateX(-100%);
 						}
 					}
