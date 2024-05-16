@@ -33,14 +33,12 @@ https://youngmatthew98.github.io/ForestGroup/index.html
 
 * Mobile view
 
+![lightModeMain](https://github.com/YoungMatthew98/ForestGroup/assets/146666329/68883d54-f7ca-4c2e-ad3a-2bf851ff39a3)![lightModeNavigation](https://github.com/YoungMatthew98/ForestGroup/assets/146666329/510bf5fc-b071-467e-82cd-bda1d007b3e1)
 
-![lightModeMain](https://github.com/YoungMatthew98/ForestGroup/assets/146666329/68883d54-f7ca-4c2e-ad3a-2bf851ff39a3)
 
-![lightModeNavigation](https://github.com/YoungMatthew98/ForestGroup/assets/146666329/510bf5fc-b071-467e-82cd-bda1d007b3e1)
+![darkModeMain](https://github.com/YoungMatthew98/ForestGroup/assets/146666329/cb0f9ed5-1792-4bd2-b371-1280113e5037)![darkmodeNavigation](https://github.com/YoungMatthew98/ForestGroup/assets/146666329/edec5474-dc1d-4cd6-91de-4d008d658471)
 
-![darkModeMain](https://github.com/YoungMatthew98/ForestGroup/assets/146666329/cb0f9ed5-1792-4bd2-b371-1280113e5037)
 
-![darkmodeNavigation](https://github.com/YoungMatthew98/ForestGroup/assets/146666329/edec5474-dc1d-4cd6-91de-4d008d658471)
 
 
 
