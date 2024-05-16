@@ -7,14 +7,23 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+::selection {
+	background-color: $accent-color;
+}
 html {
 	font-size: 62.5%; //? To samo co 10px !
 	scroll-behavior: smooth;
 }
+body {
+	background-color: $second-color;
+	font-family: 'Outfit', sans-serif;
+	overflow: visible;
+	font-weight: 200;
+	font-size: 1.6rem; //? BODY MA 16PX , WIĘC 1 EM = 16PX
+}
 a {
 	text-decoration: none;
 }
-
 button {
 	cursor: pointer;
 	border: none;
@@ -23,10 +32,15 @@ ul,
 li {
 	list-style-type: none;
 }
-body {
-	background-color: $second-color;
-	font-family: 'Outfit', sans-serif;
-	overflow: visible;
-	font-weight: 200;
-	font-size: 1.6rem; //? BODY MA 16PX , WIĘC 1 EM = 16PX
+
+@media (prefers-color-scheme: dark) {
+	html {
+		filter: invert(100%) hue-rotate(180deg);
+	}
+	img,
+	iframe,
+	.header,
+	.hero-img {
+		filter: invert(100%) hue-rotate(180deg);
+	}
 }
