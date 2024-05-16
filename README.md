@@ -1,7 +1,7 @@
 
 # Forest Group - The most beautiful park in your area!
-
-This is a website made from a web development courses from MMCSchool.pl. Website is fully responsive, has support for Dark Mode. It has a dedicated "Contact" subpage, where You can find a validation form to contact Us.
+ 
+Website is fully responsive, has support for Dark Mode. It has a dedicated "Contact" subpage, where You can find a validation form which allows User to send a message.
 
 
 ## Live Preview
@@ -9,10 +9,10 @@ https://youngmatthew98.github.io/ForestGroup/index.html
 
 ## Features
 
+- Modern visual design
 - Support for Dark Mode based on Your system mode preferences
 - Responsiveness across all devices
-- Contact form with a validation
-- Modern visual design
+- Contact form with built-in validation
 
 
 ## Tech Stack
